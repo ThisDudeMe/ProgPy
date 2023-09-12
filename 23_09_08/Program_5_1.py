@@ -1,16 +1,6 @@
-
-from numpy import empty
-
-
-def Calculate():
-    
-    try:
-        while True:
-            userInput = str(input("write your text")).lower()
-            content = len(userInput)
-            if content > 0:
-                print("sdsd")
-
-    except Exception as e:
-        e = "problem"
-        print(e)
+s = input('Skriv en mening: ')
+s = s.strip()
+i = s.find(' ')
+j = s.rfind(' ')
+print('Det första ordet är:', s[0:i])
+print('Det sista ordet är: ', s[j+1:])
