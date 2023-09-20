@@ -18,9 +18,12 @@ def BlackJackShuffle():
     for i in cards.keys():
         shuffledCardStack.extend([i] * 4)
 
-    random.shuffle(shuffledCardStack)
+    returnDeck = shuffledCardStack * random.randrange(1, 5)
 
-    return shuffledCardStack
+    random.shuffle(returnDeck)
+
+    return returnDeck
+
 def BlackJackStartDeal():
 
     currentGameCards = BlackJackShuffle()
@@ -79,68 +82,102 @@ def BlackJackStartDeal():
                 isAiTurn = True
 
     return aiCards,playerCards,currentGameCards
+
 def AddCard():
-    #SWITCH DYNAMIC TO PLAYER AND AI //// CURRENTLY DOES NOT ADD CARDS FROM DECK AND REMOVE FROM DECK!!
+
     cardTypes = BlackJackCards()
     cards = BlackJackStartDeal()
-    aiCards, playerCards,currentGameCards = cards
-    dynamicCards = []
-    dynamicCardsValue = 00
+    aiCards, playerCards, currentGameCards = cards
     playerCardValue = 0
     aiCardValue = 0
     isAiTurn = False
 
     if isAiTurn is False:
 
-        dynamicCards = playerCards
-        dynamicCardsValue = playerCardValue
+        playerCards.append(currentGameCards.pop(-1))
 
-    if isAiTurn is True:
-        
-        dynamicCards = aiCards
-        dynamicCardsValue = aiCardValue
+        for i in range(playerCards[-1]):
 
-    for i in range(dynamicCards[-1]):
-
-        if i in cardTypes:
-            
-            if "Ace" in dynamicCards:
+            if i in cardTypes:
                 
-                if cardTypes["Ace"] == 1:
+                if "Ace" in playerCards:
                     
-                    if (dynamicCardsValue + cardTypes[i] + 10) <= 21:
+                    if cardTypes["Ace"] == 1:
+                        
+                        if (playerCardValue + cardTypes[i] + 10) <= 21:
 
-                        cardTypes["Ace"] = 11
-                        dynamicCardsValue += cardTypes[i]
+                            cardTypes["Ace"] = 11
+                            playerCardValue += cardTypes[i]
 
-                if cardTypes["Ace"] == 11:
+                    elif cardTypes["Ace"] == 11:
 
-                    if (dynamicCardsValue + cardTypes[i]) > 21:
+                        if (playerCardValue + cardTypes[i]) > 21:
 
+                            cardTypes["Ace"] = 1
+                            playerCardValue += cardTypes[i]
+
+                    else:
                         cardTypes["Ace"] = 1
-                        dynamicCardsValue += cardTypes[i]
+                        playerCardValue += cardTypes[i]      
 
                 else:
-                    cardTypes["Ace"] = 1
-                    dynamicCardsValue += cardTypes[i]      
+            
+                    playerCardValue += cardTypes[i]
 
-            else:
+    elif isAiTurn is True:
         
-                dynamicCardsValue += cardTypes[i]                
-    
-    if isAiTurn == False:
+        aiCards.append(currentGameCards.pop(-1))
 
-        playerCardValue = dynamicCardsValue
-        
-        return isAiTurn, playerCardValue, aiCardValue
+        for i in range(aiCards[-1]):
+
+            if i in cardTypes:
+                
+                if "Ace" in aiCards:
+                    
+                    if cardTypes["Ace"] == 1:
+                        
+                        if (aiCardValue + cardTypes[i] + 10) <= 21:
+
+                            cardTypes["Ace"] = 11
+                            aiCardValue += cardTypes[i]
+
+                    elif cardTypes["Ace"] == 11:
+
+                        if (aiCardValue + cardTypes[i]) > 21:
+
+                            cardTypes["Ace"] = 1
+                            aiCardValue += cardTypes[i]
+
+                    else:
+                        cardTypes["Ace"] = 1
+                        aiCardValue += cardTypes[i]      
+
+                else:
+            
+                    aiCardValue += cardTypes[i]
+
     
-    if isAiTurn == True:
         
-        aiCardValue = dynamicCardsValue
-        return isAiTurn, aiCardValue
+       
+    return isAiTurn, aiCardValue, playerCardValue
+    
 def AITrigger():
     aIcards = AddCard()
-    isAITurn, aiCardValue = aIcards
+    isAITurn, aiCardValue, playerCardValue = aIcards
+
+    while isAITurn == True:
+        
+        if aiCardValue > playerCardValue and aiCardValue <=21:
+
+            return print("ai WIns")
+            
+        elif aiCardValue < 21
+
+            
+
+
+    pass
+
 def StartGame():
     while True:
         
