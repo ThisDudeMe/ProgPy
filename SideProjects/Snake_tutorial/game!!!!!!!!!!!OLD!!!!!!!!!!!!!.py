@@ -1,4 +1,4 @@
-#Vid URL: https://youtu.be/L8ypSXwyBds?t=1426
+'''#Vid URL: https://youtu.be/L8ypSXwyBds?t=1426
 
 
 import pygame
@@ -155,4 +155,4 @@ class SnakeGameAI:
         elif self.direction == Direction.UP:
             y -= BLOCK_SIZE
             
-        self.head = Point(x, y)
+        self.head = Point(x, y)'''

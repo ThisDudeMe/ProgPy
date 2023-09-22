@@ -1,4 +1,4 @@
-import turtle
+'''import turtle
 
 # Create a turtle object
 t = turtle.Turtle()
@@ -16,3 +16,4 @@ t.forward(100)
 
 # Close the turtle graphics window when clicked
 turtle.exitonclick()
+'''

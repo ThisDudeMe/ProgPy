@@ -1,4 +1,4 @@
-import random
+'''import random
 
 from colorama import Fore, Back, Style, init
 from sympy import false
@@ -207,3 +207,4 @@ def StartGame():
 
 
 
+'''
