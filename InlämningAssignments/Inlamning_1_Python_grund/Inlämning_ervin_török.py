@@ -1,15 +1,9 @@
-
-
-#TODO: REDO WITH VIRTUAL ENVIRONMENT //  implement it so it will download all imports automatically
-
 #Imports
 import requests
 import time
-import os
-import colorama
 import tkinter
 
-from colorama import Fore, Back, Style
+from colorama import Fore, Style
 from tkinter import filedialog
 
 #function for starting the program
@@ -54,7 +48,7 @@ def StartProgram():
                 print(Fore.RED, "Press (2) if you have a file on your computer", resetStyle)
                 print(Fore.RED, "Press (3) if you want to input a text manually", resetStyle)
                 print(Fore.RED, "Press (4) if you want to go back", resetStyle)
-                time.sleep(0.5)
+                time.sleep(0.2)
 
                 print("Please enter URL ")
                 print("Example:https://www.example.com ")
@@ -86,7 +80,7 @@ def StartProgram():
                 print(Fore.GREEN, "Press (2) if you have a file on your computer", resetStyle)
                 print(Fore.RED, "Press (3) if you want to input a text manually", resetStyle)
                 print(Fore.RED, "Press (4) if you want to go back", resetStyle)
-                time.sleep(0.5)
+                time.sleep(0.2)
                 
                 fileSelected = chooseFile()
 
@@ -115,7 +109,7 @@ def StartProgram():
                 print(Fore.RED, "Press (2) if you have a file on your computer", resetStyle)
                 print(Fore.GREEN, "Press (3) if you want to input a text manually", resetStyle)
                 print(Fore.RED, "Press (4) if you want to go back", resetStyle)
-                time.sleep(0.5)
+                time.sleep(0.2)
                 
                 userInput = input("Please write the text you want to encrypt! ")
         
@@ -139,7 +133,7 @@ def StartProgram():
                 print(Fore.RED, "Press (2) if you have a file on your computer", resetStyle)
                 print(Fore.RED, "Press (3) if you want to input a text manually", resetStyle)
                 print(Fore.GREEN, "Press (4) if you want to go back", resetStyle)
-                time.sleep(0.5)
+                time.sleep(0.2)
                 return            
             else:
                 print(Fore.RED,"Invalid Please choose a correct option! ",resetStyle) 
@@ -158,7 +152,7 @@ def StartProgram():
                 print("What do you want to do?")
                 print(Fore.GREEN, "Press (1) to encrypt text", resetStyle)
                 print(Fore.RED, "Press (2) to decrypt text", resetStyle)
-                time.sleep(0.5)
+                time.sleep(0.2)
                 EncryptText()
                 break
                 
@@ -166,7 +160,7 @@ def StartProgram():
                 print("What do you want to do?")
                 print(Fore.RED, "Press (1) to encrypt text", resetStyle)
                 print(Fore.GREEN, "Press (2) to decrypt text", resetStyle)
-                time.sleep(0.5)
+                time.sleep(0.2)
                 DecryptText()
                 break
                 
