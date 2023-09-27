@@ -18,7 +18,7 @@ def StartProgram():
                 "Z": "z"
                 }
     
-    def chooseFile():
+    def ChooseFile():
         root = tkinter.Tk()
         root.withdraw()
         filePath = filedialog.askopenfilename()
@@ -82,7 +82,7 @@ def StartProgram():
                 print(Fore.RED, "Press (4) if you want to go back", resetStyle)
                 time.sleep(0.2)
                 
-                fileSelected = chooseFile()
+                fileSelected = ChooseFile()
 
                 if fileSelected:
         
