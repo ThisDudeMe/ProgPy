@@ -22,19 +22,23 @@ class BlackJack:
     def __init__(self):
         
         tempDeck = DeckContents().CreateDeck().copy()
-        amountOfDecks = random.randrange(1,8)
-        gameDeck = {}
-        
-        for _ in range(amountOfDecks):
-            gameDeck.update(tempDeck)
-        
-        random.shuffle(gameDeck)
+        self.blackJackDeck = {}
 
-            
-            
+        for number, card in enumerate(tempDeck, start=2):
         
+            if any(value in card for value in ["Ten", "Joker", "Queen", "King"]):
+                 self.blackJackDeck[card] = 10
 
-        pass
+            elif any(value in card for value in ["Ace"]):
+                 self.blackJackDeck[card] = 1
+            
+            else:
+                 self.blackJackDeck[card] = number
+                 
+        print(self.blackJackDeck)
+        return  self.blackJackDeck
+
+    
 class Poker:
     pass
 class AskUser:
@@ -62,3 +66,4 @@ class AskUser:
 
             except ValueError as e:
                 print(e)
+BlackJack()
