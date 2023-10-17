@@ -3,8 +3,6 @@ from PIL import Image, ImageEnhance
 import json
 import numpy as np
 import random
-import tkinter as tk
-from tkinter import filedialog, Label, Button
 
 # CHANGE THIS LATER TO GUI
 catTrainingFolder = "C:/Users/PC/Downloads/cat_dog_images/test/ncats"
