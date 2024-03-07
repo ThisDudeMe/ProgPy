@@ -1,0 +1,13 @@
+.title{
+color: rgba(229, 7, 7, 0.591);
+}
+.name{
+    color: rgb(8, 0, 255);
+}
+
+#aboutme{
+    position: fixed;
+    left: 300px;
+    top: 500px;
+
+}
