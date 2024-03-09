@@ -1,13 +1,50 @@
-.title{
-color: rgba(229, 7, 7, 0.591);
-}
-.name{
-    color: rgb(8, 0, 255);
+.titlebox 
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: fixed; 
+    top: 10px; 
+    left: 50%;
+    transform: translateX(-50%);
 }
 
-#aboutme{
-    position: fixed;
-    left: 300px;
-    top: 500px;
 
+
+.title
+{
+    color: rgb(0, 0, 0);
+    text-align: center;
+}
+
+.name 
+{
+    color: rgb(0, 0, 0);
+    text-align: center;
+    margin-top: -20px;
+}
+
+.navbar
+{
+    color: black;
+    text-align: center;
+}
+
+
+.aboutmebox
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    position: fixed; 
+    top: 500px; 
+    left: 50%;
+    transform: translateX(-50%);
+    
+}
+.portrait
+{
+    transform: scale(50%);
 }

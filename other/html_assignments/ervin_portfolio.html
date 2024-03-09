@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="testing.css">
-    <script>src="test.js"</script>
+    <script src="test.js"></script>
     <title>Document</title>
 </head>
 
@@ -12,51 +12,50 @@
     <!-- Full Page --//START\\-->
     <div class="fullpage">
 
-        <!-- Title --//START\\-->
-        <title>
-            <h1 class="title"> CV </h1>
-            <h2 class="name">Jon Doe</h2>
-            <nav>
-                <table>
-                    <th>
-                    <td colspan="2">Menu</td>
-                    </th>
-                    <tr>
-                        <a href="#aboutme"><button>Go to Section 1</button></a>
-                        <button>op2</button>
-                        <button>op3</button>
-                    </tr>
-                    
-                    
-                </table>
-            </nav>
-        </title>
-        <!-- Title --//END\\-->
+        <!-- Header --//START\\-->
+        <header>
+
+            <div class="titlebox">
+                <h1 class="title">CV</h1>
+                <h2 class="name">Jon Doe</h2>
+                <!-- Nav Bar --//START\\-->
+                <nav class="navbar">
+                    <table>
+                        <tr>
+                            <th colspan="4">Menu</th>
+                        </tr>
+                        <tr>
+                            <td><a href="#HL_about_me"><button>About Me</button></a></td>
+                            <td><button>op2</button></td>
+                            <td><button>op3</button></td>
+                            <td><a href="ph_cv.txt" download="mycv.txt"><button>Download My CV</button></a></td>
+                        </tr>
+                    </table>
+                </nav>
+                <!-- Nav Bar --//END\\-->
+            </div>
+            
+        </header>
+        <!-- Header --//END\\-->
             
         <!-- About Me --//START\\-->
-        <article id="aboutme">
-            <header>
-                About Me
-            </header>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+        <article id="HL_about_me" class="aboutmebox">
+            <header class="about_me_title">About Me</header>
+            <p class="about_me_text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. 
                 Magni sapiente soluta numquam sunt voluptate cumque odio sit, 
                 quis amet hic voluptatem animi perferendis iusto consectetur alias? 
                 Tenetur tempora illum dolores?
             </p>
-
-                    </section>
-            <aside>
-                <img src="" alt="portrait image">
+            <aside class="portrait">
+                <img src="PH_portrait.jpg" alt="portrait image">
             </aside>
-        
         </article>
         <!-- About Me --//END\\-->
 
         <!-- Education --//START\\-->
         <article>
-            <header>
-                Education
-            </header>
+            <header>Education</header>
             <p>
                 <ul>
                     <li>School_PH</li>
@@ -67,11 +66,9 @@
         </article>
         <!-- Education --//END\\-->
 
-        <!-- Work Exp --//START\\-->
+        <!-- Work Experience --//START\\-->
         <article>
-            <header>
-                Work Experience
-            </header>
+            <header>Work Experience</header>
             <p>
                 <ul>
                     <li>Work_PH</li>
@@ -80,13 +77,11 @@
                 </ul>
             </p>
         </article>
-        <!-- Work Exp --//END\\-->
+        <!-- Work Experience --//END\\-->
 
-        <!-- Programing Language --//START\\-->
+        <!-- Programming Language --//START\\-->
         <article>
-            <header>
-                Programming Language
-            </header>
+            <header>Programming Language</header>
             <p>
                 <ul>
                     <li>Skill_PH</li>
@@ -95,23 +90,73 @@
                 </ul>
             </p>
         </article>
-        <!-- Programing Language --//END\\-->
+        <!-- Programming Language --//END\\-->
         
         <!-- Language --//START\\-->
         <article>
-        <header>
-            Language
-        </header>
-        <p>
-            <ul>
-                <li>Skill_PH</li>
-                <li>Skill_PH</li>
-                <li>Skill_PH</li>
-            </ul>
-        </p>
+            <header>Language</header>
+            <p>
+                <ul>
+                    <li>Skill_PH</li>
+                    <li>Skill_PH</li>
+                    <li>Skill_PH</li>
+                </ul>
+            </p>
         </article>
         <!-- Language --//END\\-->
 
+         <!-- Social Media --//START\\-->
+         <article>
+            <header>Social Media</header>
+            <p>
+                <ul>
+                    <li>Social Media_PH</li>
+                    <li>Social Media_PH</li>
+                    <li>Social Media_PH</li>
+                </ul>
+            </p>
+        </article>
+        <!-- Social Media --//END\\-->
+
+        <!-- My Best Work --//START\\-->
+        <article>
+            <header>My Best Work</header>
+            <p>
+                <ul>
+                    <li>My Best Work_PH</li>
+                    <li>My Best Work_PH</li>
+                    <li>My Best Work_PH</li>
+                </ul>
+            </p>
+        </article>
+        <!-- My Best Work --//END\\-->
+
+         <!-- References --//START\\-->
+         <article>
+            <header>References</header>
+            <p>
+                <ul>
+                    <li>Reference1_PH</li>
+                    <li>Reference2_PH</li>
+                    <li>Reference3_PH</li>
+                </ul>
+            </p>
+        </article>
+        <!-- References --//END\\-->
+
+        <!-- Contactform --//START\\-->
+        <table>
+            <tr>
+                <td><input type="text" name="name" id="name"></td>
+                <td><input type="text" name="email" id="email"></td>
+            </tr>
+            <tr > <td colspan="2"><textarea name="freetext" id="freetext" cols="30<" rows="10"></textarea></td></tr>
+        </table>
+        <!-- Contactform --//END\\-->
+
+        <!-- Footer --//START\\-->
+        <footer>this is my fotter</footer>
+        <!-- Footer --//END\\-->
 
     </div>
     <!-- Full Page --//END\\-->
