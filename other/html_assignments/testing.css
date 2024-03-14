@@ -24,6 +24,21 @@
     text-align: center;
     margin-top: -20px;
 }
+.downloadcv
+{
+    transform:translateY(300px) scale(300%);
+}
+
+.arrowred
+{
+    position: fixed;
+    transform: rotate(200grad) scale(20%) translateX(900px) translateY(200px);
+}
+.arrowgreen
+{
+    position: fixed;
+    transform: rotate(200grad) scale(20%) translateX(900px) translateY(200px);
+}
 
 .navbar
 {
