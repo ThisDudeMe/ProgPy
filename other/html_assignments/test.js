@@ -1,7 +1,7 @@
 document.addEventListener
 (
     'DOMContentLoaded', function() 
-    {
+    { 
         var image = document.getElementById("arrowgreen");
         setInterval
         (
@@ -16,7 +16,13 @@ document.addEventListener
                     image.style.visibility = "hidden";
                 }
             }
+            
             , 1000
+
+    
+
+
         );
     }
 );
+
