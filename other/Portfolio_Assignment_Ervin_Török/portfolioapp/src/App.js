@@ -1,5 +1,5 @@
 import React from "react";
-import styles from './App.css'
+import styles from "./App.module.css"
 import { TitleName } from "./Components/TitleName";
 import { NavMenu } from "./Components/NavMenu";
 import { AboutMe } from "./Components/AboutMe";
@@ -11,8 +11,7 @@ import { Footer } from "./Components/Footer";
 
 function App() {
   return (
-    <div className={styles.siteBackground}>
-
+    <div className={styles.appBackground}>
       <PaddingBlock />
       <TitleName />
       <PaddingBlock />
