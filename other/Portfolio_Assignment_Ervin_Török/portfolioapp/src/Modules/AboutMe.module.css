@@ -1,0 +1,30 @@
+.aboutMeContainer{
+    display: block;
+    width: 80%;
+    margin: auto;
+    padding-top: 20px; /* Space from the previous content */
+    text-align: center;
+}
+
+.aboutMeTitle{
+    margin-top: 0; /* Remove the top margin if not needed */
+    margin-bottom: 20px;
+    transform: scale(1); /* Reset scale if it was too big */
+}
+
+/* Wrap content to manage layout */
+.aboutMeContent {
+    text-align: center;
+    width: 100%; /* Use the full width to center content */
+}
+
+.aboutMeText, .aboutMeImage {
+    display: inline-block; /* Display side by side */
+    vertical-align: top; /* Align at the top */
+    width: 49%; /* Allocate half width to each, adjust as necessary */
+}
+
+.aboutMeImage img {
+    width: 100%; /* Keep image responsive */
+    max-width: 200px;
+}

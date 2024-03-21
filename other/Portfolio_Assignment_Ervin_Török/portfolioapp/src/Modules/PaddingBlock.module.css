@@ -1,0 +1,6 @@
+.paddingContainer{
+    display: block;
+    padding: 50px;
+    text-align: center;
+    color: rgba(0, 0, 0, 0);
+}

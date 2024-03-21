@@ -1,0 +1,18 @@
+.titleContainer 
+{
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.titleText
+{   
+    transform: scale(200%);
+    color: black;
+}
+
+.titleUnderText
+{
+    transform: scale(100%);
+    color: black;
+}
